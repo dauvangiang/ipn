@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class IPNController {
     @GetMapping("/hello")
     public String hello() {
+        System.err.println("Test logs!");
         return "Hello World";
     }
 
