@@ -1,10 +1,7 @@
 package com.dvgiang.ipndemo;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/ipn")
@@ -40,4 +37,9 @@ public class IPNController {
         return ResponseEntity.ok("OK");
     }
 
+    @PostMapping
+    public ResponseEntity<Object> postIpn(@RequestBody IpnDTO ipnDTO) {
+        System.err.println("Ok ok ok!");
+        return ResponseEntity.ok("OK");
+    }
 }
