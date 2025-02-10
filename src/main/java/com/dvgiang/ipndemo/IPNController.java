@@ -52,8 +52,7 @@ public class IPNController {
     }
 
     @GetMapping("/pay")
-    public String getPay() {
-        String text = "00020101021238570010A000000727012700069704220113VQRQAAWFI27760208QRIBFTTA530370454061000005802VN62190107NPS68690804Test63042F6B";
+    public String getPay(@RequestParam String text) {
         QRCodeWriter qrCodeWriter = new QRCodeWriter();
         Map<EncodeHintType, Object> hints = new HashMap<>();
         hints.put(EncodeHintType.CHARACTER_SET, "UTF-8");
